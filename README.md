@@ -27,7 +27,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL:
+- Solution URL: https://github.com/paridhi3/NFT-Preview-Card-Component
 - Live Site URL: https://paridhi3.github.io/NFT-Preview-Card-Component/
 
 ## Built with
