@@ -159,5 +159,5 @@ hr {
 }
 
 .att:hover {
-  color: white;
+  color: hsl(178, 100%, 50%);
 }
