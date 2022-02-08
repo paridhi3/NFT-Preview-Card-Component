@@ -1,11 +1,8 @@
-  /* - Soft blue: hsl(215, 51%, 70%)
-  - Cyan: hsl(178, 100%, 50%)
-  - Very dark blue (main BG): hsl(217, 54%, 11%)
-  - Very dark blue (card BG): hsl(216, 50%, 16%)
-  - Very dark blue (line): hsl(215, 32%, 27%)
-  - White: hsl(0, 0%, 100%) */
-
-
+/* Bright orange: hsl(31, 77%, 52%)
+Dark cyan: hsl(184, 100%, 22%)
+Very dark cyan: hsl(179, 100%, 13%)
+Transparent white (paragraphs): hsla(0, 0%, 100%, 0.75)
+Very light gray (background, headings, buttons): hsl(0, 0%, 95%) */
 * {
   padding: 0;
   margin: 0;
@@ -13,151 +10,126 @@
 }
 
 body {
-  background-color: hsl(217, 54%, 11%);
-  font-family: 'Kumbh Sans', sans-serif;
-  min-height: 100vh;
+  background-color: hsl(0, 0%, 95%);
+  font-family: 'Lexend Deca', sans-serif;
+  height: 100vh;
   display: flex;
   justify-content: center;
   flex-direction: column;
 }
 
-.card {
-  background-color: hsl(216, 50%, 16%);
-  width: 20rem;
-  border-radius: 1.5rem;
+.container {
   margin: auto;
-  position: relative;
-}
-
-.card-img-top {
-  padding: 15px;
-  border-radius: 1.5rem;
-}
-
-.card-img-container {
-  position: relative;
-}
-
-.overlay {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  opacity: 0;
-  transition: .5s ease;
-  background-color: hsl(178, 100%, 50%);
-  border-radius: 1rem;
-  margin: 15px;
-}
-
-.card-img-container:hover .overlay {
-  opacity: 0.5;
-  cursor: pointer;
-}
-
-.view-icon {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  text-align: center;
-  opacity: 1;
-}
-
-.card-title {
-  color: white;
-  font-weight: 600;
-  text-decoration: none;
-}
-
-.card-title:hover {
-  color: hsl(178, 100%, 50%);
-  text-decoration: none;
-}
-
-.card-text {
-  color: hsl(215, 51%, 70%);
-  font-weight: 400;
-}
-
-.row {
-  column-gap: 50px;
   display: flex;
+  flex-wrap: wrap;
+  align-content: space-around;
+  justify-content: center;
   align-items: center;
-  justify-content: space-between;
+}
+
+h1 {
+  font-family: 'Big Shoulders Display', cursive;
+  color: hsl(0, 0%, 95%);
+  margin-bottom: 30px;
+}
+
+p {
+  color: hsla(0, 0%, 100%, 0.75);
+  font-size: 15px;
+}
+
+.icon {
+  margin: 43px 43px 43px 0;
 }
 
 .col {
-  display: flex;
-  align-items: center;
+  padding: 0 60px;
+  height: 520px;
+  width: 300px;
 }
 
-.eth-icon {
-  margin-right: 5px;
+.sedan {
+  background-color: hsl(31, 77%, 52%);
+  border-radius: 10px 0 0 10px;
 }
 
-.eth-text {
-  color: hsl(178, 100%, 50%);
-  margin-bottom: 0;
+.suv {
+  background-color: hsl(184, 100%, 22%);
 }
 
-.clock-icon {
-  margin-right: 5px;
+.luxury {
+  background-color: hsl(179, 100%, 13%);
+  border-radius: 0 10px 10px 0;
 }
 
-.clock-text {
-  color: hsl(215, 51%, 70%);
-  text-align: right;
-  margin-bottom: 0;
-}
-
-hr {
-  color: hsl(215, 51%, 70%);
-  border-top: 1px solid;
-}
-
-.avatar {
-  border: 2px solid white;
-  border-radius: 100%;
-  width: 40px;
-  height: 40px;
-  margin: 0 10px 10px 10px;
-}
-
-.credentials {
-  font-weight: 300;
-  padding-right: 30px;
-}
-
-.creation {
-  color: hsl(215, 51%, 70%);
-}
-
-.name {
-  color: white;
+.btn {
+  width: 150px;
+  height: 50px;
+  border-radius: 40px;
+  font-family: 'Lexend Deca', sans-serif;
+  font-size: 15px;
+  background: hsl(0, 0%, 95%);
+  border: solid hsl(0, 0%, 95%) 2px;
   text-decoration: none;
+  margin: 80px 50px 50px 0;
 }
 
-.name:hover {
-  color: hsl(178, 100%, 50%);
+.sedan-button {
+  color: hsl(31, 77%, 52%);
+}
+
+.suv-button {
+  color: hsl(184, 100%, 22%);
+}
+
+.luxury-button {
+  color: hsl(179, 100%, 13%);
+}
+
+.btn:hover {
   text-decoration: none;
+  background: none;
+  color: hsl(0, 0%, 95%);
+}
+
+@media (max-width: 992px) {
+  .col {
+    padding: 40px;
+    max-width: 300px;
+    margin: auto;
+  }
+  .container {
+    flex-direction: column;
+    margin: auto;
+    height: auto;
+  }
+
+.container, .container-md, .container-sm {
+  max-width: 540px;
+}
+
+  p {
+    margin-bottom: 24px;
+    padding-right: 0;
+  }
+  .sedan {
+    border-radius: 10px 10px 0 0;
+  }
+  .luxury {
+    border-radius: 0 0 10px 10px;
+  }
 }
 
 .attribution {
-  font-weight: lighter;
-  padding: 5px;
   text-align: center;
-  color: white;
 }
 
 .att {
-  color: white;
+  color: black;
   text-decoration: underline;
 }
 
 .att:hover {
-  color: hsl(178, 100%, 50%);
+  color: black;
+  text-decoration: none;
 }
